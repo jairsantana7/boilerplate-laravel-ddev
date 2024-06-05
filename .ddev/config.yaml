@@ -4,8 +4,10 @@ docroot: Application/public
 php_version: "8.2"
 webserver_type: nginx-fpm
 xdebug_enabled: false
-additional_hostnames: []
-additional_fqdns: []
+additional_hostnames:
+  - loja1
+additional_fqdns:
+  - loja1.laravel.com.br
 database:
     type: mariadb
     version: "10.4"
@@ -15,6 +17,9 @@ web_environment: []
 composer_root: Application
 working_dir:
   web: /var/www/html/Application
+project_tld: com.br
+
+
 
 # Key features of DDEV's config.yaml:
 

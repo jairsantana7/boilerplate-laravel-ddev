@@ -161,7 +161,10 @@ middleware:
 	@:
 
 new:
+	ddev start
+	ddev exec rm -rf /var/www/html/Application/*
 	ddev composer global require laravel/installer
 	ddev exec composer create-project --prefer-dist laravel/laravel . $(filter-out $@,$(MAKECMDGOALS))
 %:
 	@:
+	ddev exec cp /var/www/html/.env /var/www/html/Application/.env
